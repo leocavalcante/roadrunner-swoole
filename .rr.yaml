@@ -1,0 +1,14 @@
+version: "3"
+
+server:
+  command: "php worker.php"
+  relay: "unix://rr.sock"
+  
+http:
+  address: 0.0.0.0:8080
+  pool:
+    num_workers: 1
+
+logs:
+  level: debug
+  mode: development
